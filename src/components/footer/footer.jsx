@@ -12,12 +12,13 @@ import {
   FiTwitter,
   FiYoutube,
 } from "react-icons/fi";
+import { Divider } from "@chakra-ui/react";
 function Footer() {
   return (
-    <div className="w-[100%] py-20 bg-sky-500 text-white text-xl font-[600]">
-      <div className="container flex flex-col items-start justify-start gap-10 px-5 mx-auto md:px-10 lg:px-20 ">
+    <div className="w-[100%]  bg-sky-500 text-white text-xl  relative">
+      <div className="container flex flex-col items-start justify-start gap-10 px-5 py-16 mx-auto md:px-10 ">
         <h1 className="text-4xl font-bold text-left ">CONTACT US</h1>
-        <div className="flex justify-between gap-20 h-[50vh]">
+        <div className="flex justify-between  gap-10 min-h-[50vh] flex-col lg:flex-row w-[100%]">
           {/*---------------------Div 1---------------*/}
           <div className="flex flex-col gap-5">
             <h2 className="py-5 text-3xl font-bold ">
@@ -60,15 +61,15 @@ function Footer() {
           {/*---------------------Div 2---------------*/}
           <div>
             <h2 className="py-5 text-3xl font-bold ">USEFUL LINKS</h2>
-            <div className="flex justify-between">
-              <div className="flex flex-col gap-5">
+            <div className="flex flex-col justify-between sm:flex-row">
+              <div className="flex flex-col gap-3 px-3">
                 <a href="#">Home</a>
                 <a href="#">About Us</a>
                 <a href="#">Products</a>
                 <a href="#">Services</a>
                 <a href="#">Contact Us</a>
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-3 px-3">
                 <a href="#">Home</a>
                 <a href="#">About Us</a>
                 <a href="#">Products</a>
@@ -77,6 +78,37 @@ function Footer() {
               </div>
             </div>
           </div>
+          {/*---------------------Div 3---------------*/}
+          <div>
+            <h2 className="py-5 text-3xl font-bold ">APPLICATIONS </h2>
+            <div className="flex flex-col justify-between sm:flex-row">
+              <div className="flex flex-col gap-3 px-3">
+                <a href="#">Agriculture</a>
+                <a href="#">Residential</a>
+                <a href="#">Commercial Buildings</a>
+                <a href="#">Pressure Boosting</a>
+                <a href="#">Dewatering</a>
+                <a href="#">HVAC</a>
+                <a href="#">Boiler Feed</a>
+                <a href="#">Borewell Submersible Pumps</a>
+              </div>
+              <div className="flex flex-col gap-3 px-3">
+                <a href="#">Flood Control</a>
+                <a href="#">Fire Fighting</a>
+                <a href="#">Water Treatment</a>
+                <a href="#">Lift/Drift Irrigation</a>
+                <a href="#">Industry</a>
+                <a href="#">Water Supply</a>
+                <a href="#">Modern Irrigation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Divider className="my-0" />
+      <div className="h-[60px] flex items-center">
+        <div className="container px-10 mx-auto">
+          2023 C.R.I. Pumps Private Limited ©All Rights Reserved
         </div>
       </div>
     </div>
