@@ -44,7 +44,7 @@ function Slide({ src, title, content, height, width }) {
   return (
     <div className="relative mx-auto" style={style}>
       {title !== "" || content !== "" ? (
-        <div className="text-center  absolute w-[100%] h-[100%]  top-0 left-0 flex flex-col justify-end align-bottom pb-[5%] bg-black bg-opacity-40 text-white z-50 ">
+        <div className="text-center  absolute w-[100%] h-[100%]  top-0 left-0 flex flex-col justify-end align-bottom pb-[5%] bg-black bg-opacity-40 text-white">
           <h2 className={`text-${headFont} font-bold`}>{title}</h2>
           <p className={`"text-${contentFont}"`}>{content}</p>
         </div>
@@ -61,7 +61,7 @@ function NavigationBtn({ direction, onClick }) {
       onClick={onClick}
       className={`${
         direction === "next" ? "right-0" : "left-0"
-      } absolute top-1/2 md:mx-10 transform -translate-y-1/2 z-50 bg-gray-100 opacity-70 rounded-full p-3`}
+      } absolute top-1/2 md:mx-10 transform -translate-y-1/2 z-10 bg-gray-100 opacity-70 rounded-full p-3`}
     >
       {direction === "next" ? (
         <ChevronRightIcon className="w-6 h-6 text-4xl" />
@@ -93,8 +93,8 @@ function Carousel({ slides, height, slideWidth, slidesPerView }) {
       className="relative overflow-hidden max-w-[100%]"
     >
       {slides
-        ? slides.map((slide) => (
-            <SwiperSlide key={Math.random()}>
+        ? slides.map((slide, i) => (
+            <SwiperSlide key={i}>
               <Slide
                 src={slide.src}
                 alt={slide.alt}

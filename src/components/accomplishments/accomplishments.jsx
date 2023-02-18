@@ -1,15 +1,19 @@
 import { SimpleGrid } from "@chakra-ui/react";
+import useWindowSize from "hooks/useWindowSize";
 
 function Accomplishments() {
+  const size = useWindowSize();
   return (
-    <div className="flex gap-0 text-white bg-gray-800 ">
-      <div className="overflow-hidden flex-4 ">
-        <img
-          src="/interior.jpg"
-          alt="CRI"
-          className="transition-all transition hover:scale-125 "
-        />
-      </div>
+    <div className="flex flex-wrap gap-0 text-white bg-gray-800 xl:flex-nowrap">
+      {size.width > 768 && (
+        <div className="overflow-hidden flex-4 ">
+          <img
+            src="/interior.jpg"
+            alt="CRI"
+            className="transition hover:scale-125 opacity-70"
+          />
+        </div>
+      )}
       <section className="flex flex-col gap-10 px-16 py-16 flex-3">
         <h2 className="text-3xl font-bold ">WHY C.R.I.</h2>
         <p>
@@ -26,7 +30,7 @@ function Accomplishments() {
           tempore mollitia. Dolores, qui aliquam. Tempora distinctio
           voluptatibus a dolor voluptatem similique.
         </p>
-        <SimpleGrid columns={[1, 1, 2]} spacing={10}>
+        <SimpleGrid columns={[1, 2, 2]} spacing={10}>
           <div className="flex flex-col gap-5">
             <h3 className="font-bold text-7xl">21 +</h3>
             <p>Global manufacturing facilities</p>

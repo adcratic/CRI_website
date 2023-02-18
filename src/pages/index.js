@@ -16,13 +16,17 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const { width, height } = useWindowSize();
 
+  const subscribtionFormSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <>
       <Navbar />
       <Header />
       <CategoryList />
       <CategoryGrid />
-      <EmbedVideo ratio={16 / 9} allowFullScreen={true}>
+      <EmbedVideo>
         <iframe
           height="100%"
           width="100%"
@@ -35,7 +39,7 @@ export default function Home() {
       <LatestProducts />
       <Accomplishments />
       <News />
-      <SubscriptionForm />
+      <SubscriptionForm onSubmit={subscribtionFormSubmit} />
       <Footer />
     </>
   );

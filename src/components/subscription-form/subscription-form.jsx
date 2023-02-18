@@ -7,12 +7,12 @@ function SubscriptionForm({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ email, name });
+    onSubmit({ email, firstName, lastName });
   };
 
   return (
     <div className="w-[100%] py-20 bg-gray-200 ">
-      <div className="container flex flex-col w-[90%] md:w-[50%] gap-10 mx-auto">
+      <div className="container flex flex-col w-[100%]  gap-10 mx-auto">
         <h2 className="text-3xl font-bold text-center text-sky-500">
           SUBSCRIBE TO OUR BLOG
         </h2>
@@ -26,21 +26,21 @@ function SubscriptionForm({ onSubmit }) {
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="px-5 py-3 text-lg text-gray-600 focus:outline-none w-[90%] md:w-[30%] "
+              className="px-5 py-3 text-lg text-gray-600 focus:outline-none "
             />
             <input
               type="text"
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="px-5 py-3 text-lg text-gray-600 focus:outline-none w-[90%] md:w-[30%]"
+              className="px-5 py-3 text-lg text-gray-600 focus:outline-none"
             />
             <input
               type="text"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="px-5 py-3 text-lg text-gray-600 focus:outline-none w-[90%] md:w-[30%]"
+              className="px-5 py-3 text-lg text-gray-600 focus:outline-none"
             />
           </div>
           <button

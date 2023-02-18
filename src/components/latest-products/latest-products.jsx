@@ -13,16 +13,34 @@ const slides = [
     title: "",
     content: "",
   },
+  {
+    src: "/pump.jpg",
+    alt: "pump",
+    title: "",
+    content: "",
+  },
+  {
+    src: "/pump.jpg",
+    alt: "pump",
+    title: "",
+    content: "",
+  },
+  {
+    src: "/pump.jpg",
+    alt: "pump",
+    title: "",
+    content: "",
+  },
 ];
 
 function LatestProducts() {
   const { width, height } = useWindowSize();
 
   return (
-    <div className="px-10 py-20 bg-sky-50">
-      <div className="container flex flex-col gap-10 mx-auto">
+    <div className="py-20 bg-sky-50">
+      <div className="container flex flex-col gap-10 px-10 mx-auto md:px-26 lg:px-44 ">
         <h2 className="text-3xl font-bold text-sky-500">LATEST PRODUCTS</h2>
-        <p className="leading-7 text-gray-600 text-md">
+        <p className="text-xl leading-7 text-gray-600">
           {" "}
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
@@ -34,8 +52,8 @@ function LatestProducts() {
           Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
           vulputate eleifend
         </p>
-        <p className="text-lg text-gray-600">
-          <a href="" className="text-sky-500">
+        <p className="text-xl text-gray-600">
+          <a href="#" className="text-sky-500">
             Contact us
           </a>{" "}
           for knowing more about our latest special application pumps.

@@ -10,19 +10,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-function EmbedVideo({ ratio, children }) {
+function EmbedVideo({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <div
-        className={`w-[100%] h-auto ratio-${ratio}`}
-        style={{
-          backgroundImage: "url('/video.jpg')",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        onClick={onOpen}
-      ></div>
+      <div className="w-[100%]" onClick={onOpen}>
+        <img src="/video.jpg" alt="Video" />
+      </div>
 
       <Modal
         isOpen={isOpen}
