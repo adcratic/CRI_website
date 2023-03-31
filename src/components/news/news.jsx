@@ -1,5 +1,7 @@
 import Carousel from "../carousel/carousel";
 
+//review
+
 const slides = [
   {
     src: "/homepage-slide.jpg",

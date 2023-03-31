@@ -10,7 +10,11 @@ export default function Navbar() {
       <Topbar />
       <div className="container flex items-center justify-between px-10 mx-auto md:px-3 lg:px-20 xl:56">
         <div className="py-2 lg:py-5">
-          <img src="/cri-logo.gif" alt="C.R.I. PUMPS"></img>
+          <img
+            className="max-w-[120px]"
+            src="/CRI Landscape Logo.png"
+            alt="C.R.I. PUMPS"
+          ></img>
         </div>
         {size.width > 767 && (
           <div className="flex flex-wrap my-1 lg:flex-nowrap">
